@@ -1,0 +1,14 @@
+name: IngressRouter
+version: 1.0.0
+main: io.github.jayden0903.ingress.IngressRouter
+api-version: '26.2'
+folia-supported: true
+description: Pre-world transfer routing to the least-used route with one-use HMAC entry tickets
+commands:
+  router:
+    description: Router 상태 확인 및 설정 다시 읽기
+    usage: /router <status|reload>
+    permission: ingressrouter.admin
+permissions:
+  ingressrouter.admin:
+    default: op

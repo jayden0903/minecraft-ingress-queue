@@ -1,0 +1,1 @@
+{"id": "fairqueue", "name": "FairQueue", "version": "1.0.0", "description": "Strict-capacity fair-priority admission queue with one-use entry-ticket verification", "authors": ["jayden0903"], "dependencies": [{"id": "tcpshield", "optional": true}], "main": "io.github.jayden0903.fairqueue.FairQueuePlugin"}

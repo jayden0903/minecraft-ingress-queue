@@ -1,0 +1,6 @@
+name: FairQueueLobby
+version: 1.0.0
+main: io.github.jayden0903.fairqueue.lobby.QueueLobby
+api-version: '26.2'
+load: STARTUP
+description: Minimal void waiting world for the FairQueue proxy plugin

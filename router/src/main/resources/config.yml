@@ -1,0 +1,58 @@
+# IngressRouter 설정. 상대 경로는 plugins/IngressRouter/ 기준입니다.
+
+# 입장표 서명 키: 정확히 32바이트. Velocity의 FairQueue와 같은 파일을 씁니다.
+ticket-key-file: entry-ticket.key
+
+# 같은 호스트에서 도는 Velocity FairQueue의 경로 API (127.0.0.1만 허용)
+proxy-api:
+  host: 127.0.0.1
+  port: 8765
+  poll-interval-ms: 500
+  # 마지막 정상 응답을 이 시간까지 쓰고, 그 뒤로는 Round Robin으로 돌립니다.
+  stale-after-ms: 5000
+
+# 배정했지만 아직 Velocity에 도착하지 않은 예약의 유효 시간
+pending-timeout-ms: 10000
+
+server-list:
+  # MOTD/인원/아이콘을 복사해 올 메인 서버의 포트(127.0.0.1)
+  backend-port: 25566
+  max-players: 100
+  # (선택) 버전 표시. 비우면 Paper 기본값을 그대로 둡니다.
+  version-name: ""
+  protocol-min: 0
+  protocol-max: 0
+
+# Transfer 대상. 각 호스트는 DDoS 보호 서비스(예: TCPShield)에서 Velocity로 연결돼 있어야 합니다.
+# 아직 준비되지 않은 경로는 enabled: false로 두세요.
+targets:
+  - host: s1.example.com
+    port: 25565
+    enabled: true
+  - host: s2.example.com
+    port: 25565
+    enabled: true
+  - host: s3.example.com
+    port: 25565
+    enabled: true
+  - host: s4.example.com
+    port: 25565
+    enabled: true
+  - host: s5.example.com
+    port: 25565
+    enabled: true
+  - host: s6.example.com
+    port: 25565
+    enabled: true
+  - host: s7.example.com
+    port: 25565
+    enabled: true
+  - host: s8.example.com
+    port: 25565
+    enabled: true
+  - host: s9.example.com
+    port: 25565
+    enabled: true
+  - host: s10.example.com
+    port: 25565
+    enabled: true
